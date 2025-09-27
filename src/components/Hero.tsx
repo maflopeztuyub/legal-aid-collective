@@ -4,7 +4,7 @@ import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 
 // Prefer a public override so users can drop a file into public/hero-landing.jpg
 const PUBLIC_HERO = '/image frontpage website.jpg';
-const FALLBACK = '/placeholder.svg';
+const FALLBACK = '/image frontpage website.jpg';
 
 export const Hero = () => {
   const bgStack = `url('${PUBLIC_HERO}'), url('${FALLBACK}')`;
