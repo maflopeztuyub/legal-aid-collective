@@ -13,9 +13,9 @@ export const Navigation = () => {
           </Link>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-foreground hover:text-primary transition-colors">
+            <Link to="/how-it-works" className="text-foreground hover:text-primary transition-colors">
               How it Works
-            </a>
+            </Link>
             <Link to="/about" className="text-foreground hover:text-primary transition-colors">
               About
             </Link>
