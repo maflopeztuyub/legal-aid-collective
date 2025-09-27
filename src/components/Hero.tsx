@@ -2,20 +2,21 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 
-// Prefer a public override so users can drop a file into public/hero-landing.jpg
-const DEFAULT_HERO = '/hero-landing.jpg';
-const FALLBACK = '/placeholder.svg';
+// Import your asset image
+import heroImage from "@/assets/image frontpage website.png";
+const FALLBACK = "/placeholder.svg"; // fallback can stay in public folder
 
-export const Hero = ({ backgroundUrl = DEFAULT_HERO }: { backgroundUrl?: string }) => {
+export const Hero = ({ backgroundUrl = heroImage }: { backgroundUrl?: string }) => {
   const bgStack = `url('${backgroundUrl}'), url('${FALLBACK}')`;
+
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* background image layer (fully opaque so user-provided image shows) */}
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: bgStack }}
       />
-      
+
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight hero-title">
