@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Link } from "react-router-dom";
 
 const employer = {
   name: "Acme Corp",
@@ -23,7 +24,13 @@ const DemoEmployerProfile: React.FC = () => {
       <h1 className="text-3xl font-bold mb-2">{employer.name}</h1>
       <div className="mb-6 flex items-center gap-3">
         <span className="text-lg font-semibold">Total Points:</span>
-        <Badge className="text-lg px-3 py-1 bg-primary text-white">{employer.totalPoints}</Badge>
+        <div className="inline-flex items-center rounded-full text-lg font-semibold px-3 py-1 bg-primary text-white">{employer.totalPoints}</div>
+      </div>
+
+      <div className="mb-6">
+        <Link to="/get-legal-help" className="inline-block bg-accent text-white px-4 py-2 rounded-md text-lg hover:bg-accent-hover">
+          Demo User Profile
+        </Link>
       </div>
 
       <Card className="mb-6">
@@ -76,8 +83,8 @@ const DemoEmployerProfile: React.FC = () => {
           <ul className="flex flex-wrap gap-2">
             {employer.interestedCompanies.map((company, idx) => (
               <li key={idx}>
-                <Badge className="bg-accent text-primary-foreground">{company}</Badge>
-              </li>
+                  <div className="inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold bg-accent text-primary-foreground">{company}</div>
+                </li>
             ))}
           </ul>
         </CardContent>
