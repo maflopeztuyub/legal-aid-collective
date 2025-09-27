@@ -136,11 +136,11 @@ const HeroDecor: React.FC = () => (
 const ProfessionalsPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background py-16">
-      <style>{"@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&display=swap');"}</style>
+  <style>{"@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');"}</style>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-6">
           <div>
-            <h1 className="text-4xl font-extrabold" style={{ fontFamily: 'Monda, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial' }}>Professionals</h1>
+            <h1 className="text-4xl font-extrabold" style={{ fontFamily: 'Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial', letterSpacing: '-0.02em' }}>Professionals</h1>
             <p className="text-muted-foreground mt-2 max-w-xl">Browse our curated list of lawyers and legal specialists. Each profile shows grade and star score, a short CV summary, years of experience and representative cases.</p>
           </div>
           <Link to="/" className="text-sm text-primary underline">
@@ -158,7 +158,7 @@ const ProfessionalsPage: React.FC = () => {
               </div>
 
               <div className="flex-1">
-                <h2 className="text-lg font-semibold" style={{ fontFamily: 'Monda, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial' }}>{p.name}</h2>
+                <h2 className="text-lg font-semibold" style={{ fontFamily: 'Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial', letterSpacing: '-0.01em' }}>{p.name}</h2>
                 <p className="text-sm text-muted-foreground mt-1">{p.cv}</p>
 
                 <div className="mt-3 grid grid-cols-2 gap-2 text-sm">
