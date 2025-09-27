@@ -17,6 +17,7 @@ import HowItWorksContributor from "./pages/HowItWorksContributor";
 import HowItWorksBusiness from "./pages/HowItWorksBusiness";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import HowItWorks from "./pages/HowItWorks";
 import DemoBusinessDashboard from "./pages/DemoBusinessDashboard";
 import DemoUserProfile from "./pages/DemoUserProfile";
 
@@ -40,6 +41,7 @@ const App = () => (
           <Route path="/how/contributor" element={<HowItWorksContributor />} />
           <Route path="/how/business" element={<HowItWorksBusiness />} />
           <Route path="/about" element={<About />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/for-users" element={<ForUsers />} />
           <Route path="/demo-business" element={<DemoBusinessDashboard />} />
           <Route path="/demo-user-profile" element={<DemoUserProfile />} />
