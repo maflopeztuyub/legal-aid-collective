@@ -3,7 +3,7 @@ import { Clock, Shield, TrendingUp, MessageSquare, FileCheck, Award } from "luci
 
 export const Features = () => {
   return (
-    <section className="py-20 bg-background">
+  <section id="features" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
