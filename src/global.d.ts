@@ -49,3 +49,9 @@ declare module 'react/jsx-runtime' {
   export function jsxs(type: any, props: any, key?: any): any;
   export function Fragment(props: any): any;
 }
+
+// Minimal declaration for react-router-dom Link usage
+declare module 'react-router-dom' {
+  import * as React from 'react';
+  export const Link: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & { to?: string }>;
+}
