@@ -9,16 +9,12 @@ const GetLegalHelpWrapper: React.FC = () => {
       <GetLegalHelp />
 
       <div style={{ padding: 16, display: "flex", justifyContent: "center", gap: 12 }}>
-        <Link to="/get-legal-help/personal-details">
-          <StarBorder as="button" className="custom-class" color="cyan" speed="5s">
-            Personal details
-          </StarBorder>
-        </Link>
-        <Link to="/get-legal-help/apply">
-          <StarBorder as="button" className="custom-class" color="cyan" speed="5s">
-            Apply
-          </StarBorder>
-        </Link>
+        <StarBorder as={Link as any} to="/get-legal-help/personal-details" className="custom-class" color="cyan" speed="5s">
+          Personal details
+        </StarBorder>
+        <StarBorder as={Link as any} to="/get-legal-help/apply" className="custom-class" color="cyan" speed="5s">
+          Apply
+        </StarBorder>
       </div>
     </div>
   );
