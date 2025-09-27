@@ -25,7 +25,7 @@ const profiles: Profile[] = [
     name: 'Saleena Tiwari',
     title: 'CTO',
     bio: 'From Nepal, Saleena is a computer science enthusiast and climate activist committed to creating an inclusive society. Passionate about youth empowerment and sustainability, she envisions using technology to tackle food insecurity, malnutrition, and environmental challenges while educating and amplifying the voices of immigrant children.',
-    img: SaleenaImg,
+    img: MarikaImg,
   },
   {
     name: 'Maria Lopez',
@@ -48,7 +48,7 @@ const About: React.FC = () => {
           {profiles.map((p) => (
             <Card key={p.name} className="p-6 text-center">
               <img
-                //src={p.img}
+                src={p.img}
                 alt={p.name}
                 className="mx-auto h-32 w-32 rounded-full object-cover mb-4"
               />
