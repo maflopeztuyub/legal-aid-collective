@@ -6,20 +6,20 @@ import { Button } from '@/components/ui/button';
 const profiles = [
   {
     name: 'Marika Pescolido',
-    title: 'Lead Coordinator',
-    bio: 'From Rome, Italy, Marika is an aspiring physicist with a deep curiosity about the universe and a commitment to using science to address global challenges. Personally impacted by the complexities of the legal system, she was inspired to envision a platform that makes law more accessible and supportive, reflecting her drive to create solutions that help people and humanity as a whole.',
+    title: 'CEO',
+    bio: 'From Italy, Marika is an aspiring physicist with a deep curiosity about the universe and a commitment to using science to address global challenges. Personally impacted by the complexities of the legal system, she was inspired to envision a platform that makes law more accessible and supportive, reflecting her drive to create solutions that help people and humanity as a whole.',
     img: '/marika.jpg',
   },
   {
     name: 'Saleena Tiwari',
-    title: 'Community Engagement',
-    bio: 'Saleena builds partnerships with local organizations and manages outreach programs.',
+    title: 'CTO',
+    bio: 'From Nepal, Saleena is a computer science enthusiast and climate activist committed to creating an inclusive society. Passionate about youth empowerment and sustainability, she envisions using technology to tackle food insecurity, malnutrition, and environmental challenges while educating and amplifying the voices of immigrant children.',
     img: '/saleena.jpg',
   },
   {
     name: 'Maria Lopez',
-    title: 'Program Manager',
-    bio: 'Maria oversees project delivery and connects clients with the right legal teams.',
+    title: 'COO',
+    bio: 'From Mexico, Maria is passionate about sharing knowledge and creating opportunities for others. With a strong background in mathematics and science Olympiads, as well as a deep commitment to social justice and cultural preservation, she envisions education as a tool to empower communities and build a more inclusive future.'
     img: '/maria.jpg',
   },
 ];

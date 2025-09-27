@@ -131,6 +131,16 @@ export const UserTypes = () => {
                 Partner With Us
               </Button>
             </Link>
+            {/* New button: Demo Business Profile - opens the demo business dashboard page */}
+            <Link to="/demo-business" className="inline-block w-full mt-3">
+              <Button
+                size="lg"
+                variant="ghost"
+                className="w-full text-lg px-8 py-4 bg-accent text-primary-foreground hover:opacity-95"
+              >
+                Demo Business Profile
+              </Button>
+            </Link>
             </CardContent>
           </Card>
         </div>
