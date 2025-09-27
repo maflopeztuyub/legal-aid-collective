@@ -3,13 +3,14 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 
 // Prefer a public override so users can drop a file into public/hero-landing.jpg
-const PUBLIC_HERO = '/hero-landing.jpg';
+const DEFAULT_HERO = '/hero-landing.jpg';
 const FALLBACK = '/placeholder.svg';
 
-export const Hero = () => {
-  const bgStack = `url('${PUBLIC_HERO}'), url('${FALLBACK}')`;
+export const Hero = ({ backgroundUrl = DEFAULT_HERO }: { backgroundUrl?: string }) => {
+  const bgStack = `url('${backgroundUrl}'), url('${FALLBACK}')`;
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      {/* background image layer (fully opaque so user-provided image shows) */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: bgStack }}
