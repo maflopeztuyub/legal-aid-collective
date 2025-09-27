@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/image frontpage website.png";
 
 // Prefer a public override so users can drop a file into public/hero-landing.jpg
 const PUBLIC_HERO = '/hero-landing.jpg';
