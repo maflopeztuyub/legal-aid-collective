@@ -10,9 +10,9 @@ export const Hero = () => {
   const bgUrl = PUBLIC_HERO; // if the file exists in public/, the browser will load it; otherwise it 404s and fallback is still provided by CSS with imported image
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      {/* Removed blue gradient overlay to show original image colors */}
+      <div className="absolute inset-0 bg-hero-gradient opacity-90" />
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${bgUrl}), url(${heroImage})` }}
       />
       
