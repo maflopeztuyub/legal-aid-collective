@@ -48,7 +48,7 @@ const About: React.FC = () => {
           {profiles.map((p) => (
             <Card key={p.name} className="p-6 text-center">
               <img
-                src={p.img}
+                //src={p.img}
                 alt={p.name}
                 className="mx-auto h-32 w-32 rounded-full object-cover mb-4"
               />

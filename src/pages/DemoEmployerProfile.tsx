@@ -28,9 +28,7 @@ const DemoEmployerProfile: React.FC = () => {
       </div>
 
       <div className="mb-6">
-        <Link to="/get-legal-help" className="inline-block bg-accent text-white px-4 py-2 rounded-md text-lg hover:bg-accent-hover">
-          Demo User Profile
-        </Link>
+        {/* Demo User Profile button removed from landing page */}
       </div>
 
       <Card className="mb-6">
