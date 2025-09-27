@@ -18,16 +18,18 @@ export const Hero = () => {
       
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight hero-title">
             Connecting Legal 
             <span className="text-accent"> Expertise</span> with 
             <span className="text-success"> Real Impact</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
-            Hola LAW-TIE bridges the gap between those seeking legal help, ambitious student lawyers, 
-            and forward-thinking businesses. Experience collaborative legal solutions powered by 
-            dedicated teams of young professionals.
+            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
+            <strong>Bridge. Empower. Succeed.</strong><br />
+            Seeking legal help with ambitious student lawyers, 
+            and forward-thinking businesses.
+          </p>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12">

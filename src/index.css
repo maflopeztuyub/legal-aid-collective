@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import an elegant, artistic display font for the landing title. Abril Fatface/Playfair are
+  good, professional display choices available via Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@700;900&display=swap');
+
 /* LAW-TIE Design System - Professional Legal Platform
 All colors MUST be HSL.
+Test Test Test
 */
 
 @layer base {
@@ -110,6 +115,24 @@ All colors MUST be HSL.
   }
 }
 
+@layer components {
+  /* Display font for the front-page hero title. Uses a gradient fill and subtle shadow
+     to create an artistic, high-end look while leaving body fonts unchanged. */
+  .hero-title {
+    font-family: 'Abril Fatface', 'Playfair Display', Georgia, serif;
+    font-weight: 400; /* Abril Fatface is a display face — keep weight at its natural value */
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    /* Gradient text using our design tokens */
+    background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    /* Soft glow/shadow for readability over the hero image */
+    text-shadow: 0 8px 30px hsla(213, 94%, 18%, 0.18);
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -123,3 +146,4 @@ All colors MUST be HSL.
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
