@@ -82,11 +82,11 @@ export const UserTypes = () => {
                   <span>Mentoring sessions and skill development programs</span>
                 </li>
               </ul>
-            <Link to="/professionals" className="inline-block">
+            <Link to="/professionals" className="inline-block w-full mt-4">
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-4 border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground/20 hover:text-primary transition-colors"
+                className="w-full text-lg px-8 py-4 border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground/20 hover:text-primary transition-colors"
               >
                 Join as Professional
               </Button>

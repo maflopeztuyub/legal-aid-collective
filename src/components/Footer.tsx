@@ -38,7 +38,7 @@ export const Footer = () => {
             <ul className="space-y-2 text-primary-foreground/80">
               <li><a href="#" className="hover:text-accent transition-colors">How it Works</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">For Users</a></li>
-              <li><a href="#" className="hover:text-accent transition-colors">For Students</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">For Empl</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">For Businesses</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">Success Stories</a></li>
             </ul>
