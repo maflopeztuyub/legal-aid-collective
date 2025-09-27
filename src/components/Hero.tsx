@@ -27,7 +27,7 @@ export const Hero = () => {
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
             <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
             <strong>Bridge. Empower. Succeed.</strong><br />
-            Seeking legal help with ambitious student lawyers, 
+            Seeking legal help with ambitious lawyers, 
             and forward-thinking businesses.
           </p>
           </p>
