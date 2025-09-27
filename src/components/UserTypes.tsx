@@ -123,7 +123,14 @@ export const UserTypes = () => {
                   <span>Recruitment scoring system and semester-based reports</span>
                 </li>
               </ul>
-              <Button className="w-full" variant="outline">Partner With Us</Button>
+              <Link to="/partners" className="inline-block w-full mt-4">
+                <Button
+                  size="lg"
+                  className="w-full text-lg px-8 py-4 bg-white border border-black text-black hover:bg-gray-100"
+                >
+                  Partner With Us
+                </Button>
+              </Link>
             </CardContent>
           </Card>
         </div>

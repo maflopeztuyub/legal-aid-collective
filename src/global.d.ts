@@ -54,6 +54,14 @@ declare module 'react/jsx-runtime' {
 declare module 'react-router-dom' {
   import * as React from 'react';
   export const Link: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & { to?: string }>;
+  export const BrowserRouter: any;
+  export const Routes: any;
+  export const Route: any;
+}
+
+declare module '@tanstack/react-query' {
+  export const QueryClient: any;
+  export const QueryClientProvider: any;
 }
 
 // Minimal shim for react when types are not installed (development convenience only)
