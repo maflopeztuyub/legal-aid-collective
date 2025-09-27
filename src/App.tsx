@@ -16,7 +16,6 @@ import HowItWorksUser from "./pages/HowItWorksUser";
 import HowItWorksContributor from "./pages/HowItWorksContributor";
 import HowItWorksBusiness from "./pages/HowItWorksBusiness";
 import About from "./pages/About";
-import SignIn from "./pages/SignIn";
 import NotFound from "./pages/NotFound";
 import HowItWorks from "./pages/HowItWorks";
 import DemoBusinessDashboard from "./pages/DemoBusinessDashboard";
@@ -43,7 +42,6 @@ const App = () => (
           <Route path="/how/contributor" element={<HowItWorksContributor />} />
           <Route path="/how/business" element={<HowItWorksBusiness />} />
           <Route path="/about" element={<About />} />
-          <Route path="/signin" element={<SignIn />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/for-users" element={<ForUsers />} />
           <Route path="/demo-business" element={<DemoBusinessDashboard />} />
