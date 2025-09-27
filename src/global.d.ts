@@ -49,3 +49,47 @@ declare module 'react/jsx-runtime' {
   export function jsxs(type: any, props: any, key?: any): any;
   export function Fragment(props: any): any;
 }
+
+// Minimal declaration for react-router-dom Link usage
+declare module 'react-router-dom' {
+  import * as React from 'react';
+  export const Link: React.FC<React.AnchorHTMLAttributes<HTMLAnchorElement> & { to?: string }>;
+}
+
+// Minimal shim for react when types are not installed (development convenience only)
+declare module 'react' {
+  const React: any;
+  export = React;
+}
+
+// Minimal shim for @radix-ui/react-slot
+declare module '@radix-ui/react-slot' {
+  import * as React from 'react';
+  export const Slot: React.FC<any>;
+}
+
+// Minimal shims for class-variance-authority
+declare module 'class-variance-authority' {
+  export function cva(...args: any[]): any;
+  export type VariantProps<T> = any;
+}
+
+// Ambient React namespace for minimal typing in development without full @types/react
+declare namespace React {
+  type ButtonHTMLAttributes<T> = any;
+  type AnchorHTMLAttributes<T> = any;
+  type HTMLAttributes<T> = any;
+  type FC<P = {}> = (props: P & { children?: any }) => any;
+  type SVGProps<T> = any;
+  type RefAttributes<T> = any;
+  type MutableRefObject<T> = { current: T | null };
+  function forwardRef<T, P = {}>(render: (props: P, ref: any) => any): any;
+}
+
+// Minimal runtime React object (typed enough for forwardRef generic usage)
+declare const React: {
+  forwardRef: <T, P = {}>(render: (props: P, ref: any) => any) => any;
+  createElement: any;
+  Fragment: any;
+  __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED?: any;
+};

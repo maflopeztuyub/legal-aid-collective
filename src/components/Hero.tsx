@@ -50,7 +50,7 @@ export const Hero = () => {
             </div>
             <div className="flex items-center space-x-3 text-primary-foreground/90">
               <GraduationCap className="h-8 w-8 text-success" />
-              <span className="text-lg font-semibold">For Students</span>
+              <span className="text-lg font-semibold">For Employers</span>
             </div>
             <div className="flex items-center space-x-3 text-primary-foreground/90">
               <Building className="h-8 w-8 text-success" />

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Users, GraduationCap, Building, CheckCircle, Trophy, Handshake } from "lucide-react";
 
 export const UserTypes = () => {
@@ -56,7 +57,7 @@ export const UserTypes = () => {
             <CardHeader>
               <div className="flex items-center space-x-3 mb-4">
                 <GraduationCap className="h-10 w-10 text-primary" />
-                <CardTitle className="text-2xl text-primary">For Students</CardTitle>
+                <CardTitle className="text-2xl text-primary">For Employers</CardTitle>
               </div>
               <CardDescription className="text-lg">
                 Build your career with real cases, mentorship, and direct business connections.
@@ -81,7 +82,15 @@ export const UserTypes = () => {
                   <span>Mentoring sessions and skill development programs</span>
                 </li>
               </ul>
-              <Button className="w-full" variant="outline">Join Our Network</Button>
+            <Link to="/professionals" className="inline-block">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-4 border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground/20 hover:text-primary transition-colors"
+              >
+                Join as Professional
+              </Button>
+            </Link>
             </CardContent>
           </Card>
 
