@@ -10,7 +10,7 @@ import MariaImg from '@/assets/maria.jpg';
 
 const profiles = [
   {
-    name: 'Marika Pescolido',
+    name: 'Marika Pescosolido',
     title: 'CEO',
     bio: 'From Italy, Marika is an aspiring physicist with a deep curiosity about the universe and a commitment to using science to address challenges. Personally impacted by the complexities of the legal system, she envisions a platform that makes law more accessible, reflecting her drive to create solutions that help humanity as a whole.',
     img: MarikaImg,
