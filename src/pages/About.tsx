@@ -7,7 +7,7 @@ const profiles = [
   {
     name: 'Marika Pescolido',
     title: 'CEO',
-    bio: 'From Italy, Marika is an aspiring physicist with a deep curiosity about the universe and a commitment to using science to address challenges. Personally impacted by the complexities of the legal system, she envisions a platform that makes law more accessible, reflecting her drive to create solutions that help humanity as a whole.',
+    bio: 'From Italy, Marika is an aspiring physicist with a deep curiosity about the universe and a commitment to using science to address global challenges. Personally impacted by the complexities of the legal system, she was inspired to envision a platform that makes law more accessible and supportive, reflecting her drive to create solutions that help people and humanity as a whole.',
     img: '/marika.jpg',
   },
   {
