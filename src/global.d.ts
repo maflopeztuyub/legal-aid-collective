@@ -33,6 +33,9 @@ declare module '*.jpeg';
 declare module '*.png';
 declare module '*.svg';
 
+// Specific assets under the @ alias
+declare module '@/assets/*';
+
 // Allow the @ alias to resolve to src/* (already configured in tsconfig)
 declare module '@/*';
 

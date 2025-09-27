@@ -1,19 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
-import heroImage from "@/assets/image frontpage website.png";
 
 // Prefer a public override so users can drop a file into public/hero-landing.jpg
 const PUBLIC_HERO = '/hero-landing.jpg';
+const FALLBACK = '/placeholder.svg';
 
 export const Hero = () => {
-  const bgUrl = PUBLIC_HERO; // if the file exists in public/, the browser will load it; otherwise it 404s and fallback is still provided by CSS with imported image
+  const bgStack = `url('${PUBLIC_HERO}'), url('${FALLBACK}')`;
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
-      <div className="absolute inset-0 bg-hero-gradient opacity-90" />
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${bgUrl}), url(${heroImage})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: bgStack }}
       />
       
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -36,15 +35,9 @@ export const Hero = () => {
                 Get Legal Help <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Link to="/professionals" className="inline-block">
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-4 border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground/20 hover:text-primary transition-colors"
-              >
-                Join as Professional
-              </Button>
-            </Link>
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-4" aria-label="Join as Professional">
+              <Link to="/professionals">Join as Professional</Link>
+            </Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
