@@ -57,6 +57,7 @@ declare module 'react-router-dom' {
   export const BrowserRouter: any;
   export const Routes: any;
   export const Route: any;
+  export function useNavigate(): (to: string) => void;
 }
 
 declare module '@tanstack/react-query' {
@@ -69,6 +70,9 @@ declare module 'react' {
   const React: any;
   export = React;
 }
+
+// Provide shorthand hooks and router helpers as any to satisfy imports in this environment
+declare function useState<T>(initial?: T): [T, (v: T) => void];
 
 // Minimal shim for @radix-ui/react-slot
 declare module '@radix-ui/react-slot' {

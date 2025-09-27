@@ -11,8 +11,8 @@ const Hero: React.FC = () => (
         Hire high-performing interns and full-time talent sourced and vetted through our platform. Sponsor legal aid initiatives and meet top performers for recruitment.
       </p>
       <div className="flex justify-center gap-4">
-        <Link to="/" className="inline-block">
-          <Button className="px-6 py-3">Back to Home</Button>
+        <Link to="/partners/signup" className="inline-block">
+          <Button className="px-6 py-3">Become a Member</Button>
         </Link>
         <Link to="/professionals" className="inline-block">
           <Button variant="outline" className="px-6 py-3">View Top Professionals</Button>
