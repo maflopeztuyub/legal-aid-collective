@@ -20,6 +20,7 @@ import NotFound from "./pages/NotFound";
 import HowItWorks from "./pages/HowItWorks";
 import DemoBusinessDashboard from "./pages/DemoBusinessDashboard";
 import DemoUserProfile from "./pages/DemoUserProfile";
+import DemoEmployerProfile from "./pages/DemoEmployerProfile";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +46,7 @@ const App = () => (
           <Route path="/for-users" element={<ForUsers />} />
           <Route path="/demo-business" element={<DemoBusinessDashboard />} />
           <Route path="/demo-user-profile" element={<DemoUserProfile />} />
+          <Route path="/demo-employer-profile" element={<DemoEmployerProfile />} />
           
           <Route path="/get-legal-help/personal-details" element={<PersonalDetails />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

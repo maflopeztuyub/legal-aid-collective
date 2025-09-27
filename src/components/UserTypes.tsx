@@ -97,15 +97,15 @@ export const UserTypes = () => {
               </Button>
             </Link>
             {/* External Employer Portal button (placeholder URL) - visible and matching other card demo buttons */}
-            <a href="https://example.com/employers" target="_blank" rel="noopener noreferrer" className="inline-block w-full mt-4">
+            <Link to="/demo-employer-profile" className="inline-block w-full mt-4">
               <Button
                 size="lg"
                 variant="ghost"
                 className="w-full text-lg px-8 py-4 bg-accent text-primary-foreground hover:opacity-95"
               >
-                Employer Portal
+                Demo Employer Profile
               </Button>
-            </a>
+            </Link>
             </CardContent>
           </Card>
 
