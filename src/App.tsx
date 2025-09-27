@@ -16,6 +16,9 @@ import HowItWorksLanding from "./pages/HowItWorksLanding";
 import HowItWorksUser from "./pages/HowItWorksUser";
 import HowItWorksContributor from "./pages/HowItWorksContributor";
 import HowItWorksBusiness from "./pages/HowItWorksBusiness";
+import DemoUser from "./pages/DemoUser";
+import DemoEmployer from "./pages/DemoEmployer";
+import DemoBusiness from "./pages/DemoBusiness";
 
 const queryClient = new QueryClient();
 
@@ -37,6 +40,9 @@ const App = () => (
           <Route path="/how/contributor" element={<HowItWorksContributor />} />
           <Route path="/how/business" element={<HowItWorksBusiness />} />
           <Route path="/for-users" element={<ForUsers />} />
+          <Route path="/demo/user" element={<DemoUser />} />
+          <Route path="/demo/employer" element={<DemoEmployer />} />
+          <Route path="/demo/business" element={<DemoBusiness />} />
           <Route path="/get-legal-help/personal-details" element={<PersonalDetails />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
