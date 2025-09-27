@@ -20,7 +20,7 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
-            LAW-TIE bridges the gap between those seeking legal help, ambitious student lawyers, 
+            Hola LAW-TIE bridges the gap between those seeking legal help, ambitious student lawyers, 
             and forward-thinking businesses. Experience collaborative legal solutions powered by 
             dedicated teams of young professionals.
           </p>
