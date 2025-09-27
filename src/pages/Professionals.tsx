@@ -146,7 +146,7 @@ const ProfessionalsPage: React.FC = () => {
             <p className="text-muted-foreground mt-2 max-w-xl">Browse our curated list of lawyers and legal specialists. Each profile shows grade and star score, a short CV summary, years of experience and representative cases.</p>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/professionals/create" className="inline-block">
+            <Link to="/signin" className="inline-block">
               <Button size="sm" className="flex items-center gap-2 px-3 py-2 bg-accent text-primary-foreground">
                 <Plus className="h-4 w-4" />
                 Make my own
