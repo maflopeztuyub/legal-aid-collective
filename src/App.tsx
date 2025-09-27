@@ -8,10 +8,14 @@ import GetLegalHelp from "./pages/GetLegalHelp";
 import NotFound from "./pages/NotFound";
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 import HowItWorks from "./pages/HowItWorks";
 import DemoBusinessDashboard from "./pages/DemoBusinessDashboard";
 import DemoUserProfile from "./pages/DemoUserProfile";
 import FinancesSponsors from "./pages/FinancesSponsors";
+=======
+import Professionals from "./pages/Professionals";
+>>>>>>> Stashed changes
 =======
 import Professionals from "./pages/Professionals";
 >>>>>>> Stashed changes
@@ -33,6 +37,7 @@ const App = () => (
           <Route path="/professionals" element={<Professionals />} />
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           <Route path="/partners" element={<Partners />} />
           <Route path="/partners/signup" element={<PartnersSignup />} />
           <Route path="/partners/confirmation" element={<PartnersConfirmation />} />
@@ -48,6 +53,11 @@ const App = () => (
           <Route path="/finances-sponsors" element={<FinancesSponsors />} />
           
           <Route path="/get-legal-help/personal-details" element={<PersonalDetails />} />
+=======
+=======
+          <Route path="/get-legal-help" element={<GetLegalHelp />} />
+>>>>>>> c4496b91ae655c1236c5e5fdef10f28f0d0f9575
+>>>>>>> Stashed changes
 =======
 =======
           <Route path="/get-legal-help" element={<GetLegalHelp />} />
