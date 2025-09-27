@@ -29,8 +29,12 @@ export const Navigation = () => {
 
 
           <div className="flex items-center space-x-4">
-            <Button variant="outline">Sign In</Button>
-            <Button>Get Started</Button>
+            <Button variant="outline" asChild>
+              <Link to="/signin">Sign In</Link>
+            </Button>
+            <Button asChild>
+              <Link to="/partners/signup">Get Started</Link>
+            </Button>
           </div>
         </div>
       </div>
