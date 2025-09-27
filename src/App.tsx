@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import GetLegalHelp from "./pages/GetLegalHelp";
 import GetLegalHelpWrapper from "./pages/GetLegalHelpWrapper";
 import SubmitCase from "./pages/SubmitCase";
+import PersonalDetails from "./pages/PersonalDetails";
 import NotFound from "./pages/NotFound";
 import Professionals from "./pages/Professionals";
 import ApplyForm from "./pages/ApplyForm";
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/get-legal-help" element={<GetLegalHelpWrapper />} />
           <Route path="/professionals" element={<Professionals />} />
           <Route path="/get-legal-help/apply" element={<ApplyForm />} />
+          <Route path="/get-legal-help/personal-details" element={<PersonalDetails />} />
           <Route path="/submit-case" element={<SubmitCase />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
