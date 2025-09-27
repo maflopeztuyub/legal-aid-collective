@@ -14,6 +14,19 @@ declare module 'react-dom/client' {
 declare module '*.css';
 
 export {};
+
+// Minimal React typings for editor while deps are missing
+declare namespace JSX {
+  interface IntrinsicElements {
+    [elemName: string]: any;
+  }
+}
+
+declare const React: any;
+declare module 'react' {
+  export = React;
+}
+
 // Project-wide module declarations
 declare module '*.jpg';
 declare module '*.jpeg';
