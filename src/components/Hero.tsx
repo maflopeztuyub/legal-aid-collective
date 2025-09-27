@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 
 // Import your asset image
-import heroImage from "@/assets/image frontpage website.jpg";
+import heroImage from "@/assets/image frontpage website.png";
 const FALLBACK = "/placeholder.svg"; // fallback can stay in public folder
 
 export const Hero = ({ backgroundUrl = heroImage }: { backgroundUrl?: string }) => {
