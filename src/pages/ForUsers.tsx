@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StarBorder from "@/components/StarBorder";
 
 const ForUsers: React.FC = () => {
   return (
@@ -14,7 +15,7 @@ const ForUsers: React.FC = () => {
           <h2>Start your application</h2>
           <p>Begin by saving your personal details so professionals can understand your background and case.</p>
           <Link to="/get-legal-help/personal-details">
-            <button style={{ padding: "8px 12px", borderRadius: 6 }}>Personal details</button>
+            <StarBorder as="button" className="custom-class" color="cyan" speed="5s">Personal details</StarBorder>
           </Link>
         </article>
 
@@ -22,7 +23,7 @@ const ForUsers: React.FC = () => {
           <h2>Submit your case</h2>
           <p>Quickly submit a summary of your case to get initial feedback.</p>
           <Link to="/submit-case">
-            <button style={{ padding: "8px 12px", borderRadius: 6 }}>Submit your case</button>
+            <StarBorder as="button" className="custom-class" color="cyan" speed="5s">Submit your case</StarBorder>
           </Link>
         </article>
 
@@ -30,7 +31,7 @@ const ForUsers: React.FC = () => {
           <h2>Find a professional</h2>
           <p>Browse vetted lawyers and specialists to find the right match for your case.</p>
           <Link to="/professionals">
-            <button style={{ padding: "8px 12px", borderRadius: 6 }}>Browse professionals</button>
+            <StarBorder as="button" className="custom-class" color="cyan" speed="5s">Browse professionals</StarBorder>
           </Link>
         </article>
 
@@ -38,13 +39,13 @@ const ForUsers: React.FC = () => {
           <h2>Need legal help</h2>
           <p>Go to the main Get Legal Help page for full guidance and to start the assisted process.</p>
           <Link to="/get-legal-help">
-            <button style={{ padding: "8px 12px", borderRadius: 6 }}>Get legal help</button>
+            <StarBorder as="button" className="custom-class" color="cyan" speed="5s">Get legal help</StarBorder>
           </Link>
         </article>
       </section>
 
       <footer style={{ marginTop: 20, color: "#666", fontSize: 13 }}>
-        <p>If you'd like other quick actions on this page (upload materials, contact support, FAQ), tell me what to add and I will implement them.</p>
+        <p>If you'd like other quick actions on this page (upload materials, support contact, FAQ), tell me what to add and I will implement them.</p>
       </footer>
     </div>
   );

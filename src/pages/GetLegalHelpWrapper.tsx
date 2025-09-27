@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import GetLegalHelp from "./GetLegalHelp";
+import StarBorder from "@/components/StarBorder";
 
 const GetLegalHelpWrapper: React.FC = () => {
   return (
@@ -9,10 +10,14 @@ const GetLegalHelpWrapper: React.FC = () => {
 
       <div style={{ padding: 16, display: "flex", justifyContent: "center", gap: 12 }}>
         <Link to="/get-legal-help/personal-details">
-          <button style={{ padding: "10px 18px", borderRadius: 6 }}>Personal details</button>
+          <StarBorder as="button" className="custom-class" color="cyan" speed="5s">
+            Personal details
+          </StarBorder>
         </Link>
         <Link to="/get-legal-help/apply">
-          <button style={{ padding: "10px 18px", borderRadius: 6 }}>Apply</button>
+          <StarBorder as="button" className="custom-class" color="cyan" speed="5s">
+            Apply
+          </StarBorder>
         </Link>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import StarBorder from "@/components/StarBorder";
 
 const PersonalDetails: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
@@ -95,7 +96,7 @@ const PersonalDetails: React.FC = () => {
         </label>
 
         <div>
-          <button type="submit">Save personal details</button>
+          <StarBorder as="button" type="submit" className="custom-class" color="cyan" speed="5s">Save personal details</StarBorder>
         </div>
       </form>
     </div>
