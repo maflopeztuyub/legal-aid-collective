@@ -1,3 +1,19 @@
+// Global ambient types to help the TS language server before dependencies are installed.
+declare module 'react-dom/client' {
+  import type { ReactElement } from 'react';
+
+  export interface Root {
+    render(element: ReactElement): void;
+    unmount(): void;
+  }
+
+  export function createRoot(container: Element | DocumentFragment): Root;
+}
+
+// Allow importing CSS with unknown at-rules in editors that don't have PostCSS active.
+declare module '*.css';
+
+export {};
 // Project-wide module declarations
 declare module '*.jpg';
 declare module '*.jpeg';

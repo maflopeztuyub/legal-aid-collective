@@ -48,7 +48,12 @@ export const UserTypes = () => {
                   <span>Real-time case updates and transparent communication</span>
                 </li>
               </ul>
-              <Button className="w-full">Submit Your Case</Button>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
+                <Button className="w-full">Submit Your Case</Button>
+              </div>
+              <div className="mt-4 flex space-x-4 text-sm">
+                <Link to="/demo/user" className="text-primary-foreground/90 hover:underline">Demo user profile</Link>
+              </div>
             </CardContent>
           </Card>
 
@@ -82,14 +87,19 @@ export const UserTypes = () => {
                   <span>Mentoring sessions and skill development programs</span>
                 </li>
               </ul>
-            <Link to="/professionals" className="inline-block w-full mt-4">
-              <Button
-                size="lg"
-                className="w-full text-lg px-8 py-4 bg-accent hover:bg-accent-hover text-primary-foreground"
-              >
-                Join as Professional
-              </Button>
-            </Link>
+              <div className="flex flex-col gap-4">
+                <Link to="/professionals" className="inline-block w-full mt-2">
+                  <Button
+                    size="lg"
+                    className="w-full text-lg px-8 py-4 bg-accent hover:bg-accent-hover text-primary-foreground"
+                  >
+                    Join as Professional
+                  </Button>
+                </Link>
+                <div className="mt-2 text-sm">
+                  <Link to="/demo/employer" className="text-primary/90 hover:underline">Employer demo profile</Link>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
@@ -123,14 +133,19 @@ export const UserTypes = () => {
                   <span>Recruitment scoring system and semester-based reports</span>
                 </li>
               </ul>
-              <Link to="/partners" className="inline-block w-full mt-4">
-                <Button
-                  size="lg"
-                  className="w-full text-lg px-8 py-4 bg-white border border-black text-black hover:bg-gray-100"
-                >
-                  Partner With Us
-                </Button>
-              </Link>
+              <div className="flex flex-col gap-4">
+                <Link to="/partners" className="inline-block w-full mt-2">
+                  <Button
+                    size="lg"
+                    className="w-full text-lg px-8 py-4 bg-white border border-black text-black hover:bg-gray-100"
+                  >
+                    Partner With Us
+                  </Button>
+                </Link>
+                <div className="mt-2 text-sm">
+                  <Link to="/demo/business" className="text-primary/90 hover:underline">Business demo profile</Link>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>

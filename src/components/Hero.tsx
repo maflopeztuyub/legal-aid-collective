@@ -25,11 +25,9 @@ export const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
-            <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
             <strong>Bridge. Empower. Succeed.</strong><br />
-            Seeking legal help with ambitious lawyers, 
+            Seeking legal help with ambitious lawyers,
             and forward-thinking businesses.
-          </p>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
