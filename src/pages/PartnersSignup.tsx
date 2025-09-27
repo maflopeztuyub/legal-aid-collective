@@ -19,36 +19,57 @@ const roles = [
 const hiringTypes = ["Intern", "Full-time", "Part-time", "Leadership", "Contract"];
 const hiringRanges = ["1-10", "10-50", "50+"];
 
-const evaluatePackage = (answers: { roles: string[]; type: string | null; range: string | null }) => {
+const evaluatePackage = (answers: { roles: string[]; types: string[]; range: string | null }) => {
   // Basic scoring heuristics: more roles & bigger range -> higher tier
   const roleScore = answers.roles.length;
   const rangeScore = answers.range === "50+" ? 3 : answers.range === "10-50" ? 2 : 1;
-  const typeScore = answers.type === "Full-time" || answers.type === "Leadership" ? 2 : 1;
+  const typeScore = answers.types.includes("Full-time") || answers.types.includes("Leadership") ? 2 : 1;
   const total = roleScore * 1 + rangeScore * 2 + typeScore * 2;
 
-  if (total >= 10) return "Pro Pack ($119/month)";
-  if (total >= 6) return "Growth Pack ($29/2 weeks)";
-  return "Starter Trial (7 days free)";
+  // Decide base package and base price
+  let packageName = "Starter Trial (7 days free)";
+  let basePrice = 0;
+  if (total >= 10) {
+    packageName = "Pro Pack";
+    basePrice = 119;
+  } else if (total >= 6) {
+    packageName = "Growth Pack";
+    basePrice = 29;
+  } else {
+    packageName = "Starter Trial";
+    basePrice = 0;
+  }
+
+  // If they selected more than 3 roles, increase price by 20%
+  const surcharge = answers.roles.length > 3 ? 0.2 : 0;
+  const finalPrice = Math.round((basePrice * (1 + surcharge)) * 100) / 100;
+
+  return { packageName, finalPrice, surcharge };
 };
 
 const PartnersSignup: React.FC = () => {
   const [step, setStep] = React.useState(0 as any);
   const [selectedRoles, setSelectedRoles] = React.useState([] as any[]);
   const [selectedType, setSelectedType] = React.useState(null as any);
+  // allow multiple selection for types now
+  const [selectedTypes, setSelectedTypes] = React.useState([] as any[]);
   const [selectedRange, setSelectedRange] = React.useState(null as any);
   const navigate = useNavigate();
 
   const toggleRole = (r: string) => {
     setSelectedRoles((prev) => (prev.includes(r) ? prev.filter((x) => x !== r) : [...prev, r]));
   };
+  const toggleType = (t: string) => {
+    setSelectedTypes((prev) => (prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]));
+  };
 
   const next = () => setStep((s) => Math.min(3, s + 1));
   const prev = () => setStep((s) => Math.max(0, s - 1));
 
   const finish = () => {
-    const result = evaluatePackage({ roles: selectedRoles, type: selectedType, range: selectedRange });
+    const result = evaluatePackage({ roles: selectedRoles, types: selectedTypes, range: selectedRange });
     // In a real app we'd send to the backend; here we route to a confirmation page with query param
-    navigate(`/partners/confirmation?package=${encodeURIComponent(result)}`);
+    navigate(`/partners/confirmation?package=${encodeURIComponent(result.packageName)}&price=${result.finalPrice}`);
   };
 
   return (
@@ -77,13 +98,16 @@ const PartnersSignup: React.FC = () => {
 
           {step === 1 && (
             <div>
-              <h2 className="text-xl font-semibold mb-3">2. What kind of hiring?</h2>
-              <div className="flex flex-col gap-2">
+              <h2 className="text-xl font-semibold mb-3">2. What kind of hiring? (select all that apply)</h2>
+              <div className="grid grid-cols-2 gap-2">
                 {hiringTypes.map((t) => (
-                  <label key={t} className={`p-3 border rounded-md ${selectedType === t ? "bg-accent text-primary-foreground" : "bg-white"}`}>
-                    <input type="radio" name="type" value={t} checked={selectedType === t} onChange={() => setSelectedType(t)} className="mr-2" />
+                  <button
+                    key={t}
+                    className={`text-left p-3 border rounded-md ${selectedTypes.includes(t) ? "bg-accent text-primary-foreground" : "bg-white"}`}
+                    onClick={() => toggleType(t)}
+                  >
                     {t}
-                  </label>
+                  </button>
                 ))}
               </div>
             </div>
@@ -106,7 +130,15 @@ const PartnersSignup: React.FC = () => {
           {step === 3 && (
             <div>
               <h2 className="text-xl font-semibold mb-3">Recommended Package</h2>
-              <div className="mb-4">We recommend: <strong>{evaluatePackage({ roles: selectedRoles, type: selectedType, range: selectedRange })}</strong></div>
+              {(() => {
+                const r = evaluatePackage({ roles: selectedRoles, types: selectedTypes, range: selectedRange });
+                return (
+                  <div className="mb-4">
+                    We recommend: <strong>{r.packageName}</strong>
+                    <div className="text-sm text-muted-foreground">Price: {r.finalPrice === 0 ? "Free" : `$${r.finalPrice}`}{r.surcharge ? " (including 20% surcharge for >3 roles)" : ""}</div>
+                  </div>
+                );
+              })()}
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Card className="p-4 text-center">
@@ -132,6 +164,14 @@ const PartnersSignup: React.FC = () => {
               </div>
             </div>
           )}
+
+          {/* Progress bar */}
+          <div className="mt-4">
+            <div className="w-full bg-gray-200 h-2 rounded">
+              <div className="h-2 bg-accent rounded" style={{ width: `${(step / 3) * 100}%` }} />
+            </div>
+            <div className="text-sm text-muted-foreground mt-2">Progress: {Math.round((step / 3) * 100)}%</div>
+          </div>
 
           <div className="flex justify-between mt-6">
             <div>

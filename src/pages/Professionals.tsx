@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 // Minimal data shape for a professional
 export type Professional = {
@@ -187,6 +188,14 @@ const ProfessionalsPage: React.FC = () => {
                       </li>
                     ))}
                   </ul>
+                </div>
+                <div className="mt-4 flex gap-2">
+                  <Link to="/partners/signup" className="inline-block">
+                    <Button className="px-4 py-2">Send invite</Button>
+                  </Link>
+                  <Link to="/partners/signup" className="inline-block">
+                    <Button variant="outline" className="px-4 py-2">Not interested</Button>
+                  </Link>
                 </div>
               </div>
             </Card>
