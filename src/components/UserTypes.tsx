@@ -96,12 +96,12 @@ export const UserTypes = () => {
                 Join as Professional
               </Button>
             </Link>
-            {/* External Employer Portal button (placeholder URL) */}
-            <a href="https://example.com/employers" target="_blank" rel="noopener noreferrer" className="inline-block w-full mt-3">
+            {/* External Employer Portal button (placeholder URL) - visible and matching other card demo buttons */}
+            <a href="https://example.com/employers" target="_blank" rel="noopener noreferrer" className="inline-block w-full mt-4">
               <Button
                 size="lg"
-                variant="outline"
-                className="w-full text-lg px-8 py-4 bg-white border border-black text-black hover:bg-gray-100"
+                variant="ghost"
+                className="w-full text-lg px-8 py-4 bg-accent text-primary-foreground hover:opacity-95"
               >
                 Employer Portal
               </Button>
