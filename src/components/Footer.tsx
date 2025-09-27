@@ -36,7 +36,7 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 text-primary-foreground/80">
-              <li><a href="#" className="hover:text-accent transition-colors">How it Works</a></li>
+              <li><span className="hover:text-accent transition-colors opacity-80 cursor-default">How it Works</span></li>
               <li><a href="#" className="hover:text-accent transition-colors">For Users</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">For Empl</a></li>
               <li><a href="#" className="hover:text-accent transition-colors">For Businesses</a></li>
