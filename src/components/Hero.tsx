@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 
 // Prefer a public override so users can drop a file into public/hero-landing.jpg
-const PUBLIC_HERO = '/image frontpage website.jpg';
-const FALLBACK = '/image frontpage website.jpg';
+const PUBLIC_HERO = '/image frontpage website.png';
+const FALLBACK = '/image frontpage website.png';
 
 export const Hero = () => {
   const bgStack = `url('${PUBLIC_HERO}'), url('${FALLBACK}')`;
