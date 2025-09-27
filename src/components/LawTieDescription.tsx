@@ -1,27 +1,183 @@
 import React from "react";
+import { Users, Star, Shield, Headphones, Briefcase, Scroll } from "lucide-react";
 
 export const LawTieDescription: React.FC = () => {
   return (
-    <section className="prose max-w-4xl mx-auto p-6 text-gray-900">
-      <h1 className="text-4xl font-bold mb-6">Law-Tie: Bridging Ambition and Justice</h1>
-      <p>
-        <strong>Law-Tie</strong> is an innovative platform that connects individuals in need of legal
-        assistance with ambitious student lawyers and law-related professionals. Traditionally,
-        people with financial difficulties have had to rely on low-paid pro bono lawyers with limited
-        incentives. Law-Tie changes this dynamic by offering them motivated students who are eager to
-        gain experience, dedicated to their cases, and carefully selected according to high standards.
-      </p>
+    <section className="max-w-5xl mx-auto p-8 text-gray-900">
+      <header className="mb-8">
+        <h1 className="text-4xl font-bold mb-3">Law-Tie: Bridging Ambition and Justice</h1>
+        <p className="text-lg text-muted-foreground">
+          <strong>Law-Tie</strong> connects people who need legal help with motivated student
+          professionals and law-adjacent experts. We build reliable matches, mentorship and clear
+          performance incentives so clients get committed help and students gain meaningful
+          experience.
+        </p>
+      </header>
 
-      <h2 className="text-2xl font-semibold mt-10 mb-4">Who Can Join</h2>
-      <p>
-        All professionals on Law-Tie must be students, no further along than the PhD level. Admission
-        to the platform is selective and based on:
-      </p>
-      <ul className="list-disc list-inside">
-        <li>Academic record and grade scores</li>
-        <li>Relevant previous experience</li>
-        <li>A strong and updated resume</li>
-      </ul>
+      <div className="border-t pt-8">
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Users className="w-6 h-6 text-primary" />
+          Who Can Join
+        </h2>
+        <p className="mb-4">Applicants are students (up to PhD level). Admission is selective and based on:</p>
+        <ul className="space-y-3 mb-6">
+        <p>Partners and Sponsors support the platform by choosing plans which also unlock candidate access.</p>
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Star className="w-6 h-6 text-primary" />
+          Feedback & Accountability
+        </h2>
+        <p className="mb-4">After every case both clients and students provide feedback that becomes part of the profile record.</p>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Clients must complete a survey and rate the experience</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Students provide collaboration feedback</span>
+          </li>
+        </ul>
+
+        <div className="border-t my-8" />
+
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Briefcase className="w-6 h-6 text-primary" />
+          Waitlist & Case Management
+        </h2>
+        <p className="mb-4">If a preferred professional is busy, clients can join a waitlist and receive updates.</p>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-start gap-3">
+            <Scroll className="w-5 h-5 text-accent mt-1" />
+            <span>Estimated wait times are shown and regularly updated</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Scroll className="w-5 h-5 text-accent mt-1" />
+            <span>First appointments may be online; official meetings are in-person when required</span>
+          </li>
+        </ul>
+
+        <div className="border-t my-8" />
+
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Users className="w-6 h-6 text-primary" />
+          Companies & Sponsorship
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="p-4 border rounded-lg">
+            <h3 className="font-semibold">Partners</h3>
+            <ul className="list-disc list-inside mt-2 space-y-2">
+              <li>7-day free trial</li>
+              <li>Basic Business Plan</li>
+              <li>Premium Business Plan (discounts for longer commitments)</li>
+            </ul>
+          </div>
+          <div className="p-4 border rounded-lg">
+            <h3 className="font-semibold">Sponsors</h3>
+            <ul className="list-disc list-inside mt-2 space-y-2">
+              <li>Automatic Premium Plan access</li>
+              <li>Top 50 candidate visibility</li>
+              <li>Extra branding and advertising benefits</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t my-10" />
+
+        <div className="text-center py-6">
+          <h3 className="text-2xl font-semibold mb-3">What are you waiting for?</h3>
+          <p className="mb-4">Join Law-Tie and help build an accessible, accountable legal aid ecosystem.</p>
+        </div>
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Academic record and grade scores</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Relevant previous experience</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>A strong and updated resume</span>
+          </li>
+        </ul>
+
+        <div className="border-t my-8" />
+
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Shield className="w-6 h-6 text-primary" />
+          The Star Score System
+        </h2>
+        <p className="mb-4">Student teams earn a Star Score for each case which reflects:</p>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-success mt-1" />
+            <span>The outcome of the case (win or loss)</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-success mt-1" />
+            <span>The difficulty and influence of the case</span>
+          </li>
+        </ul>
+        <p className="mb-6">Higher scores increase visibility and access to sponsors and opportunities.</p>
+
+        <div className="border-t my-8" />
+
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Briefcase className="w-6 h-6 text-primary" />
+          Professional Profiles & Sponsors
+        </h2>
+        <p className="mb-4">When creating profiles, students indicate interests and preferred sponsors.</p>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-start gap-3">
+            <Scroll className="w-5 h-5 text-accent mt-1" />
+            <span>Choose legal/professional areas of interest</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Scroll className="w-5 h-5 text-accent mt-1" />
+            <span>Select sponsors to work with</span>
+          </li>
+        </ul>
+        <p className="mb-6">Top performers are matched with sponsor interviews at semester end.</p>
+
+        <div className="border-t my-8" />
+
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Headphones className="w-6 h-6 text-primary" />
+          Mentorship & Support
+        </h2>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>First-case mentee: 1 month of free mentoring with a senior professional</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Ongoing paid mentoring and a free support channel run by experienced lawyers</span>
+          </li>
+        </ul>
+
+        <div className="border-t my-8" />
+
+        <h2 className="flex items-center gap-3 text-2xl font-semibold mb-4">
+          <Users className="w-6 h-6 text-primary" />
+          Benefits for Users (Clients)
+        </h2>
+        <p className="mb-4">Clients receive free service if eligible — with careful matching and transparency.</p>
+        <ul className="space-y-3 mb-6">
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Detailed financial and personal information improves matches</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Cedar — a 24/7 AI chatbox — helps convert everyday language into legal terms</span>
+          </li>
+          <li className="flex items-start gap-3">
+            <Star className="w-5 h-5 text-accent mt-1" />
+            <span>Responses and pairings are handled within 48 business hours</span>
+          </li>
+        </ul>
+
+        <div className="border-t my-8" />
       <p>Participants may include:</p>
       <ul className="list-disc list-inside">
         <li>Student lawyers</li>
