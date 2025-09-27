@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
@@ -29,9 +30,15 @@ export const Hero = () => {
             <Button size="lg" className="text-lg px-8 py-4 bg-accent hover:bg-accent-hover">
               Get Legal Help <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-4 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Join as Professional
-            </Button>
+            <Link to="/professionals" className="inline-block">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-lg px-8 py-4 border border-primary-foreground text-primary-foreground bg-transparent hover:bg-primary-foreground/20 hover:text-primary transition-colors"
+              >
+                Join as Professional
+              </Button>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
