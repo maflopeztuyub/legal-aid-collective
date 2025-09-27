@@ -48,7 +48,9 @@ export const UserTypes = () => {
                   <span>Real-time case updates and transparent communication</span>
                 </li>
               </ul>
-              <Button className="w-full">Submit Your Case</Button>
+              <Link to="/get-legal-help" className="inline-block w-full">
+                <Button className="w-full">Submit Your Case</Button>
+              </Link>
               {/* Button to demo user profile page */}
               <Link to="/demo-user-profile" className="inline-block w-full mt-3">
                 <Button size="lg" className="w-full text-lg px-8 py-4 bg-accent hover:bg-accent-hover text-primary-foreground">

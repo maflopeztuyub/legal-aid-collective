@@ -21,7 +21,7 @@ const ForUsers: React.FC = () => {
         <article style={{ padding: 12, border: "1px solid #eee", borderRadius: 8 }}>
           <h2>Submit your case</h2>
           <p>Quickly submit a summary of your case to get initial feedback.</p>
-          <StarBorder as={Link as any} to="/submit-case" className="custom-class" color="cyan" speed="5s">Submit your case</StarBorder>
+          <StarBorder as={Link as any} to="/get-legal-help" className="custom-class" color="cyan" speed="5s">Submit your case</StarBorder>
         </article>
 
         <article style={{ padding: 12, border: "1px solid #eee", borderRadius: 8 }}>
