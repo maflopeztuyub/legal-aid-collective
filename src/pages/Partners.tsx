@@ -45,7 +45,7 @@ const PartnersPage: React.FC = () => {
           </BenefitCard>
 
           <BenefitCard title="Recruitment leaderboard">
-            Businesses with consistent engagement earn points. High-scoring partners are invited to exclusive recruitment events and interview days.
+            Businesses with consistent engagement earn points. High-scoring partners are employerd to exclusive recruitment events and interview days.
           </BenefitCard>
         </section>
 
