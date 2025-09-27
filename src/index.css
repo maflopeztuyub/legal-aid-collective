@@ -29,10 +29,10 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    /* Bright blue accent 
+    /* Bright blue accent */
     --accent: 204 94% 55%;
     --accent-foreground: 0 0% 98%;
-    --accent-hover: 204 94% 48%;*/
+    --accent-hover: 204 94% 48%;
 
     /* Success gold */
     --success: 45 93% 47%;
