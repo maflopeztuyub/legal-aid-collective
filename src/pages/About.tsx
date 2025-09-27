@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -8,7 +7,14 @@ import MarikaImg from '@/assets/marika.jpg';
 import MariaImg from '@/assets/maria.jpg';
 import SaleenaImg from '@/assets/saleena.jpg';
 
-const profiles = [
+interface Profile {
+  name: string;
+  title: string;
+  bio: string;
+  img: string;
+}
+
+const profiles: Profile[] = [
   {
     name: 'Marika Pescosolido',
     title: 'CEO',
@@ -29,7 +35,7 @@ const profiles = [
   },
 ];
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-background py-16">
       <div className="container mx-auto px-4 max-w-4xl">
@@ -41,7 +47,11 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {profiles.map((p) => (
             <Card key={p.name} className="p-6 text-center">
-              <img src={p.img} alt={p.name} className="mx-auto h-32 w-32 rounded-full object-cover mb-4" />
+              <img
+                src={p.img}
+                alt={p.name}
+                className="mx-auto h-32 w-32 rounded-full object-cover mb-4"
+              />
               <h3 className="text-xl font-semibold">{p.name}</h3>
               <div className="text-sm text-muted-foreground mb-3">{p.title}</div>
               <p className="text-sm text-muted-foreground">{p.bio}</p>
@@ -60,3 +70,4 @@ const About = () => {
 };
 
 export default About;
+
