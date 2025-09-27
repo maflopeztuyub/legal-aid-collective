@@ -39,6 +39,11 @@ export const Hero = ({ backgroundUrl = heroImage }: { backgroundUrl?: string }) 
                 Get Legal Help <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
+                <Button size="lg" className="text-lg px-8 py-4 bg-primary hover:bg-primary-hover" asChild>
+                  <Link to="/get-legal-help">
+                    Submit Your Case <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
             <Button asChild size="lg" variant="outline" className="text-lg px-8 py-4" aria-label="Join as Professional">
               <Link to="/professionals">Join as Professional</Link>
             </Button>
