@@ -7,7 +7,7 @@ const profiles = [
   {
     name: 'Marika Pescolido',
     title: 'Lead Coordinator',
-    bio: 'Marika coordinates volunteer efforts and ensures high-quality legal support reaches those who need it most.',
+    bio: 'From Rome, Italy, Marika is an aspiring physicist with a deep curiosity about the universe and a commitment to using science to address global challenges. Personally impacted by the complexities of the legal system, she was inspired to envision a platform that makes law more accessible and supportive, reflecting her drive to create solutions that help people and humanity as a whole.',
     img: '/marika.jpg',
   },
   {
