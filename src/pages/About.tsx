@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 // Import images from assets using project alias
 import MarikaImg from '@/assets/marika.jpg';
 import MariaImg from '@/assets/maria.jpg';
-import SaleenaImg from '@/assets/saleena.jpg';
+//import SaleenaImg from '@/assets/saleena.jpg';
 
 interface Profile {
   name: string;
