@@ -29,6 +29,7 @@ export const Hero = ({ backgroundUrl = heroImage }: { backgroundUrl?: string }) 
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl leading-relaxed">
             <strong>Bridge. Empower. Succeed.</strong><br />
             Seeking legal help with ambitious lawyers,
+            <br />
             and forward-thinking companies.
           </p>
           
