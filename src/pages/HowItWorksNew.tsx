@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HowItWorksNew from "./HowItWorksNew"; // adjust path if file is in src/pages
 import React from "react";
+import React from "react";
 
 const HowItWorksNew: React.FC = () => {
   return (
@@ -12,4 +13,3 @@ const HowItWorksNew: React.FC = () => {
 };
 
 export default HowItWorksNew;
-export default App;
