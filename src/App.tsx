@@ -5,22 +5,15 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import GetLegalHelp from "./pages/GetLegalHelp";
-import PersonalDetails from "./pages/PersonalDetails";
-import ForUsers from "./pages/ForUsers";
-import Professionals from "./pages/Professionals";
-import Partners from "./pages/Partners";
-import PartnersSignup from "./pages/PartnersSignup";
-import PartnersConfirmation from "./pages/PartnersConfirmation";
-import HowItWorksLanding from "./pages/HowItWorksLanding";
-import HowItWorksUser from "./pages/HowItWorksUser";
-import HowItWorksContributor from "./pages/HowItWorksContributor";
-import HowItWorksBusiness from "./pages/HowItWorksBusiness";
-import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+<<<<<<< Updated upstream
 import HowItWorks from "./pages/HowItWorks";
 import DemoBusinessDashboard from "./pages/DemoBusinessDashboard";
 import DemoUserProfile from "./pages/DemoUserProfile";
 import FinancesSponsors from "./pages/FinancesSponsors";
+=======
+import Professionals from "./pages/Professionals";
+>>>>>>> Stashed changes
 
 const queryClient = new QueryClient();
 
@@ -32,8 +25,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/get-legal-help" element={<GetLegalHelp />} />
+<<<<<<< HEAD
           <Route path="/professionals" element={<Professionals />} />
+<<<<<<< Updated upstream
           <Route path="/partners" element={<Partners />} />
           <Route path="/partners/signup" element={<PartnersSignup />} />
           <Route path="/partners/confirmation" element={<PartnersConfirmation />} />
@@ -49,6 +43,11 @@ const App = () => (
           <Route path="/finances-sponsors" element={<FinancesSponsors />} />
           
           <Route path="/get-legal-help/personal-details" element={<PersonalDetails />} />
+=======
+=======
+          <Route path="/get-legal-help" element={<GetLegalHelp />} />
+>>>>>>> c4496b91ae655c1236c5e5fdef10f28f0d0f9575
+>>>>>>> Stashed changes
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
