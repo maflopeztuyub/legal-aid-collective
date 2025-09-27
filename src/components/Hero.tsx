@@ -4,14 +4,17 @@ import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 
 // Import your asset image
 import heroImage from "@/assets/image frontpage website.jpg";
+const FALLBACK = "/placeholder.svg"; // fallback can stay in public folder
 
 export const Hero = ({ backgroundUrl = heroImage }: { backgroundUrl?: string }) => {
+  const bgStack = `url('${backgroundUrl}'), url('${FALLBACK}')`;
+
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url('${backgroundUrl}')` }}
+        style={{ backgroundImage: bgStack }}
       />
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">

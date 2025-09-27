@@ -48,7 +48,9 @@ export const UserTypes = () => {
                   <span>Real-time case updates and transparent communication</span>
                 </li>
               </ul>
-              <Button className="w-full">Submit Your Case</Button>
+              <Link to="/get-legal-help" className="inline-block w-full">
+                <Button className="w-full">Submit Your Case</Button>
+              </Link>
               {/* Demo User Profile button (bottom of Users card) */}
               <Link to="/demo-user-profile" className="inline-block w-full mt-4">
                 <Button

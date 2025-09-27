@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // @ts-nocheck
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -39,9 +40,33 @@ const NotFound: React.FC = () => {
           <OptionCard to="/professionals" title="Professionals" subtitles={["View available professionals", "Join as a professional"]} />
           <OptionCard to="/partners" title="Partners" subtitles={["Partner with us", "Learn about business features"]} />
         </div>
+=======
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+const NotFound = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    console.error("404 Error: User attempted to access non-existent route:", location.pathname);
+  }, [location.pathname]);
+
+  return (
+    <div className="flex min-h-screen items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <h1 className="mb-4 text-4xl font-bold">404</h1>
+        <p className="mb-4 text-xl text-gray-600">Oops! Page not found</p>
+        <a href="/" className="text-blue-500 underline hover:text-blue-700">
+          Return to Home
+        </a>
+>>>>>>> e7f3bac1fcebd88b7d347057b8f9ea508e4e4e2f
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default NotFound;
+=======
+export default NotFound;
+>>>>>>> e7f3bac1fcebd88b7d347057b8f9ea508e4e4e2f

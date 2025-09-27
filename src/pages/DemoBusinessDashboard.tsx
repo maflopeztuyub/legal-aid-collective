@@ -5,11 +5,14 @@ import React from "react";
 // These keep the dashboard functional and visually close to the intended layout.
 const CompanyHeader: React.FC = () => (
   <div className="bg-white rounded-lg shadow p-6 mb-6">
-    <div>
-      <h1 className="text-2xl font-bold">Cedar AI Chat Bot</h1>
-      <p className="text-sm text-muted-foreground max-w-3xl">
-        An AI copilot embedded into any app — tell it what your goals are and get a step-by-step solution. Cedar is on a mission to turn every user into a power user by offering clear, actionable guidance and automations that accelerate outcomes.
-      </p>
+    <div className="flex items-center justify-between">
+      <div>
+        <h1 className="text-2xl font-bold">Demo Company</h1>
+        <p className="text-sm text-muted-foreground">Sample business dashboard</p>
+      </div>
+      <div>
+        <button className="px-4 py-2 bg-primary text-white rounded">Contact</button>
+      </div>
     </div>
   </div>
 );
