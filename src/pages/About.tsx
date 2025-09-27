@@ -19,7 +19,7 @@ const profiles = [
   {
     name: 'Maria Lopez',
     title: 'COO',
-    bio: 'From Mexico, Maria is passionate about sharing knowledge and creating opportunities for others. With a strong background in mathematics and science Olympiads, as well as a deep commitment to social justice and cultural preservation, she envisions education as a tool to empower communities and build a more inclusive future.'
+    bio: 'From Mexico, Maria is passionate about sharing knowledge and creating opportunities for others. With a strong background in mathematics and science Olympiads, as well as a deep commitment to social justice and cultural preservation, she envisions education as a tool to empower communities and build a more inclusive future.',
     img: '/maria.jpg',
   },
 ];
