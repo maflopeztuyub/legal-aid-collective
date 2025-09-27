@@ -34,6 +34,9 @@ const PartnersPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-background py-12">
       <div className="container mx-auto px-4">
+        <div className="flex justify-end mb-4">
+          <Link to="/" className="text-sm text-primary underline">Back to Home</Link>
+        </div>
         <Hero />
 
         <section className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">

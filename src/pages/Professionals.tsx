@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Plus } from 'lucide-react';
 
 // Minimal data shape for a professional
 export type Professional = {
@@ -144,9 +145,17 @@ const ProfessionalsPage: React.FC = () => {
             <h1 className="text-4xl font-extrabold" style={{ fontFamily: 'Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial', letterSpacing: '-0.02em' }}>Professionals</h1>
             <p className="text-muted-foreground mt-2 max-w-xl">Browse our curated list of lawyers and legal specialists. Each profile shows grade and star score, a short CV summary, years of experience and representative cases.</p>
           </div>
-          <Link to="/" className="text-sm text-primary underline">
-            Back to home
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link to="/professionals/create" className="inline-block">
+              <Button size="sm" className="flex items-center gap-2 px-3 py-2 bg-accent text-primary-foreground">
+                <Plus className="h-4 w-4" />
+                Make my own
+              </Button>
+            </Link>
+            <Link to="/" className="text-sm text-primary underline">
+              Back to home
+            </Link>
+          </div>
         </div>
 
         <HeroDecor />
@@ -193,7 +202,7 @@ const ProfessionalsPage: React.FC = () => {
                 </div>
                 <div className="mt-4 flex gap-2">
                   <Link to="/partners/signup" className="inline-block">
-                    <Button className="px-4 py-2">Send invite</Button>
+                    <Button className="px-4 py-2">Interested</Button>
                   </Link>
                   <Link to="/partners/signup" className="inline-block">
                     <Button variant="outline" className="px-4 py-2">Not interested</Button>

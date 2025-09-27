@@ -3,10 +3,10 @@ import React from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-// Import images from assets (use relative paths to avoid alias issues)
-import MarikaImg from '../assets/marika.jpg';
-import SaleenaImg from '../assets/saleena.jpg';
-import MariaImg from '../assets/maria.jpg';
+// Import images from assets using project alias
+import MarikaImg from '@/assets/marika.jpg';
+import MariaImg from '@/assets/maria.jpg';
+import SaleenaImg from '@/assets/saleena.jpg';
 
 const profiles = [
   {
