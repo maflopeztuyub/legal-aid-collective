@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Users, Building, GraduationCap } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
+// Prefer a public override so users can drop a file into public/hero-landing.jpg
+const PUBLIC_HERO = '/hero-landing.jpg';
+
 export const Hero = () => {
+  const bgUrl = PUBLIC_HERO; // if the file exists in public/, the browser will load it; otherwise it 404s and fallback is still provided by CSS with imported image
   return (
     <section className="relative min-h-[80vh] flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-hero-gradient opacity-90" />
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${bgUrl}), url(${heroImage})` }}
       />
       
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
