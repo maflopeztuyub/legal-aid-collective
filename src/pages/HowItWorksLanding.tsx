@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { HowFeatures, Icons } from '@/components/HowFeatures';
 
 const OptionCard: React.FC<{ to: string; title: string; subtitles: string[] }> = ({ to, title, subtitles }) => (
   <Link to={to} className="block">
@@ -65,21 +66,14 @@ const HowItWorksLanding: React.FC = () => {
           />
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 bg-gradient-to-r from-white/60 to-muted-foreground/10 rounded-lg shadow">
-            <h3 className="text-xl font-semibold mb-3">Transparent workflow</h3>
-            <p className="text-muted-foreground">Submissions flow to expert teams who evaluate and assign resources. Progress and outcomes are tracked transparently so users and businesses see impact.</p>
-          </div>
-          <div className="p-6 bg-gradient-to-r from-white/60 to-muted-foreground/10 rounded-lg shadow relative overflow-hidden">
-            {/* Small decorative circles */}
-            <svg className="absolute -left-6 -bottom-6 w-48 h-48 opacity-20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="18" fill="#60a5fa" />
-              <circle cx="60" cy="60" r="28" fill="#f472b6" />
-            </svg>
-            <h3 className="text-xl font-semibold mb-3">Earn and redeem points</h3>
-            <p className="text-muted-foreground">Contributors earn points for completed work; businesses can reward top performers. Points translate to visibility and opportunities.</p>
-          </div>
-        </div>
+        {/* Features block that mirrors main page aesthetic */}
+        <HowFeatures
+          features={[
+            { title: 'Transparent workflow', description: 'Submissions flow to expert teams who evaluate and assign resources. Progress and outcomes are tracked transparently so users and businesses see impact.', icon: Icons.FileText, image: '/feature-placeholder-1.svg' },
+            { title: 'Earn and redeem points', description: 'Contributors earn points for completed work; businesses can reward top performers. Points translate to visibility and opportunities.', icon: Icons.Award, image: '/feature-placeholder-2.svg' },
+            { title: 'Fast responses', description: 'Teams respond quickly to new submissions to accelerate case evaluation and matching.', icon: Icons.Clock, image: '/feature-placeholder-1.svg' },
+          ]}
+        />
       </div>
     </div>
   );

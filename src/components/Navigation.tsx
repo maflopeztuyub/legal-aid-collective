@@ -22,6 +22,9 @@ export const Navigation = () => {
             <a href="#contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </a>
+              <Link to="/finances-sponsors" className="text-foreground hover:text-primary transition-colors">
+                Finances & Sponsors
+              </Link>
           </div>
 
 
