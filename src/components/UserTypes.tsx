@@ -61,7 +61,7 @@ export const UserTypes = () => {
             <CardHeader>
               <div className="flex items-center space-x-3 mb-4">
                 <GraduationCap className="h-10 w-10 text-primary" />
-                <CardTitle className="text-2xl text-primary">For Employers</CardTitle>
+                <CardTitle className="text-2xl text-primary">For Employees</CardTitle>
               </div>
               <CardDescription className="text-lg">
                 Build your career with real cases, mentorship, and direct business connections.
