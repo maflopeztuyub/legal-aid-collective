@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 // Import images from assets using project alias
 import MarikaImg from '@/assets/marika.jpg';
 import MariaImg from '@/assets/maria.jpg';
-//import SaleenaImg from '@/assets/saleena.jpg';
+import SaleenaImg from '@/assets/saleena.jpg';
 
 interface Profile {
   name: string;
@@ -25,7 +25,7 @@ const profiles: Profile[] = [
     name: 'Saleena Tiwari',
     title: 'CTO',
     bio: 'From Nepal, Saleena is a computer science enthusiast and climate activist committed to creating an inclusive society. Passionate about youth empowerment and sustainability, she envisions using technology to tackle food insecurity, malnutrition, and environmental challenges while educating and amplifying the voices of immigrant children.',
-    img: MarikaImg,
+    img: SaleenaImg,
   },
   {
     name: 'Maria Lopez',
