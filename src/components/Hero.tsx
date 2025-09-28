@@ -52,7 +52,7 @@ export const Hero = ({ backgroundUrl = heroImage }: { backgroundUrl?: string }) 
             </Link>
             <div className="flex items-center space-x-3 text-primary-foreground/90">
               <GraduationCap className="h-8 w-8 text-success" />
-              <span className="text-lg font-semibold">For Employers</span>
+              <span className="text-lg font-semibold">For Employees</span>
             </div>
             <div className="flex items-center space-x-3 text-primary-foreground/90">
               <Building className="h-8 w-8 text-success" />
