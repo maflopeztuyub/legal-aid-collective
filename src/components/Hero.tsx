@@ -17,6 +17,13 @@ export const Hero = ({ backgroundUrl = heroImage }: { backgroundUrl?: string }) 
         style={{ backgroundImage: bgStack }}
       />
 
+      {/* Top-left logo */}
+      <div className="absolute top-4 left-4 z-20">
+        <a href="/" aria-label="LawTie home">
+          <img src="/lawtie-logo.png" alt="LawTie" className="h-12 w-auto object-contain" />
+        </a>
+      </div>
+
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight hero-title">
