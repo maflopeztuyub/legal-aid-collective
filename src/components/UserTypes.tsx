@@ -101,7 +101,7 @@ export const UserTypes = () => {
                 variant="ghost"
                 className="w-full text-lg px-8 py-4 bg-accent text-primary-foreground hover:opacity-95"
               >
-                Demo Employer Profile
+                Demo Employee Profile
               </Button>
             </Link>
             </CardContent>
