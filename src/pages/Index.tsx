@@ -3,8 +3,8 @@ import { Hero } from "@/components/Hero";
 import { UserTypes } from "@/components/UserTypes";
 import { Features } from "@/components/Features";
 import Newsletter from "@/components/Newsletter";
-import OlamaChat from '@/OlamaChat';
 import { Footer } from "@/components/Footer";
+import SimpleLegalChat from "@/components/SimpleLegalChat";
 
 const Index = () => {
   return (
@@ -13,11 +13,9 @@ const Index = () => {
       <Hero />
       <UserTypes />
       <Features />
-  <Newsletter />
-      <div className="flex justify-center my-8">
-        <OlamaChat />
-      </div>
+      <Newsletter />
       <Footer />
+      <SimpleLegalChat />
     </div>
   );
 };

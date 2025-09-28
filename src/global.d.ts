@@ -22,11 +22,6 @@ declare namespace JSX {
   }
 }
 
-declare const React: any;
-declare module 'react' {
-  export = React;
-}
-
 // Project-wide module declarations
 declare module '*.jpg';
 declare module '*.jpeg';
@@ -70,6 +65,11 @@ declare module 'lucide-react' {
   export const CheckCircle: React.FC<React.SVGProps<SVGSVGElement>>;
   export const Trophy: React.FC<React.SVGProps<SVGSVGElement>>;
   export const Handshake: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const MessageCircle: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const Send: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const FileText: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const Gavel: React.FC<React.SVGProps<SVGSVGElement>>;
+  export const Sparkles: React.FC<React.SVGProps<SVGSVGElement>>;
   export default {} as {
     [key: string]: React.FC<React.SVGProps<SVGSVGElement>>;
   };
@@ -97,15 +97,6 @@ declare module '@tanstack/react-query' {
   export const QueryClientProvider: any;
 }
 
-// Minimal shim for react when types are not installed (development convenience only)
-declare module 'react' {
-  const React: any;
-  export = React;
-}
-
-// Provide shorthand hooks and router helpers as any to satisfy imports in this environment
-declare function useState<T>(initial?: T): [T, (v: T) => void];
-
 // Minimal shim for @radix-ui/react-slot
 declare module '@radix-ui/react-slot' {
   import * as React from 'react';
@@ -118,6 +109,9 @@ declare module 'class-variance-authority' {
   export type VariantProps<T> = any;
 }
 
+// Provide shorthand hooks and router helpers as any to satisfy imports in this environment
+declare function useState<T>(initial?: T): [T, (v: T) => void];
+
 // Ambient React namespace for minimal typing in development without full @types/react
 declare namespace React {
   type ButtonHTMLAttributes<T> = any;
@@ -127,7 +121,32 @@ declare namespace React {
   type SVGProps<T> = any;
   type RefAttributes<T> = any;
   type MutableRefObject<T> = { current: T | null };
+  type ReactNode = any;
+  type ElementRef<T> = any;
+  type ComponentPropsWithoutRef<T> = any;
+  type ComponentProps<T> = any;
+  type CSSProperties = any;
   function forwardRef<T, P = {}>(render: (props: P, ref: any) => any): any;
+}
+
+// React module with all exports
+declare module 'react' {
+  export function useState<T>(initial?: T): [T, (v: T) => void];
+  export function useEffect(effect: () => void | (() => void), deps?: any[]): void;
+  export function forwardRef<T, P = {}>(render: (props: P, ref: any) => any): any;
+  export function createElement(type: any, props?: any, ...children: any[]): any;
+  export const Fragment: any;
+  
+  // Default export as React object
+  const React: {
+    forwardRef: <T, P = {}>(render: (props: P, ref: any) => any) => any;
+    createElement: any;
+    Fragment: any;
+    useState: <T>(initial?: T) => [T, (v: T) => void];
+    useEffect: (effect: () => void | (() => void), deps?: any[]) => void;
+    __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED?: any;
+  };
+  export default React;
 }
 
 // Minimal runtime React object (typed enough for forwardRef generic usage)
@@ -135,5 +154,7 @@ declare const React: {
   forwardRef: <T, P = {}>(render: (props: P, ref: any) => any) => any;
   createElement: any;
   Fragment: any;
+  useState: <T>(initial?: T) => [T, (v: T) => void];
+  useEffect: (effect: () => void | (() => void), deps?: any[]) => void;
   __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED?: any;
 };
