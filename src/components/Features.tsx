@@ -54,7 +54,10 @@ export const Features = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-professional hover:shadow-elegant transition-all duration-300">
+          <Card
+            onClick={() => window.dispatchEvent(new Event('open-floating-chat'))}
+            className="cursor-pointer shadow-professional hover:shadow-elegant transition-all duration-300"
+          >
             <CardHeader>
               <MessageSquare className="h-12 w-12 text-accent mb-4" />
               <CardTitle className="text-xl text-primary">Legal Chatbot</CardTitle>
